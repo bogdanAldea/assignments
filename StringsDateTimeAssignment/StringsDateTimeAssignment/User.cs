@@ -90,5 +90,10 @@ namespace StringsDateTimeAssignment
             return Salary.ToString("C", romCurency);
         }
 
+        public DateTimeOffset LastJoinedDateFormat()
+        {
+            return new DateTimeOffset(dateTime: DateofBirth);
+        }
+
     }
 }

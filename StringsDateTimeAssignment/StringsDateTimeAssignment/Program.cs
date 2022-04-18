@@ -40,6 +40,5 @@ Console.WriteLine(user.DateofBirth);
 Console.WriteLine($"User earns {user.FormatSalary()}");
 
 // Datetime Offset
-var d = new DateTimeOffset(dateTime: user.DateofBirth);
-Console.WriteLine(d);
-
+DateTimeOffset lastJoinedDate = user.LastJoinedDateFormat();
+Console.WriteLine($"Last time the user logged in was: {lastJoinedDate}");
