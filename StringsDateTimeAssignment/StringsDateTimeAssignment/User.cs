@@ -43,6 +43,8 @@ namespace StringsDateTimeAssignment
 
             // .ToLower() method
             // .Join() method
+            // Aici stiu ca as fi putut sa fac un string interpolation
+            // dar am vrut sa folosesc join. :D
 
             string[] userDetails = new string[] { FirstName.ToLower(), LastName.ToLower() };
             return String.Join(".", userDetails);
