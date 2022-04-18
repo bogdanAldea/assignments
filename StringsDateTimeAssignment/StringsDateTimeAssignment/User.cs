@@ -92,7 +92,8 @@ namespace StringsDateTimeAssignment
 
         public DateTimeOffset LastJoinedDateFormat()
         {
-            return new DateTimeOffset(dateTime: DateofBirth);
+            DateTime lastLoggedIn = DateTime.Now.Add(LastLogin);
+            return new DateTimeOffset(dateTime: lastLoggedIn);
         }
 
     }
