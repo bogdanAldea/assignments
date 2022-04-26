@@ -13,5 +13,10 @@ namespace Models
         public int Residents { get; set; }
         public double SurfaceArea { get; set; }
         public int Id { get; set; }
+
+        public override string ToString()
+        {
+            return $"Apartment {Number} at floor {FloorNumber}";
+        }
     }
 }

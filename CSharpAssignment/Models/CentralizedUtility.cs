@@ -13,6 +13,9 @@ namespace Models
         public Provider Provider { get; set; }
         public int Id { get; set; }
 
-        
+        public double CalculatePayment()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
