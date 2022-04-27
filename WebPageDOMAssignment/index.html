@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        <img id="amdaris-logo" src="https://amdaris.com/wp-content/themes/amdaris/icons/logos/amdaris-logo.svg" alt="">
+        <h1>Internship Assignment</h1>
+    </div>
+
+    <div>
+        <img id="avatar" src="D:\Amdaris\Assignments\assignments\WebPageDOMAssignment\images\avatar.png" alt="">
+        
+        
+        <h2>NAME</h2>
+        <p id="name"></p>
+
+        <h2>POSITION</h2>
+        <p id="position"></p>
+
+        <h2>TECHNOLOGY</h2>
+        <p id="technology"></p>
+        <button id="details-button" onclick="showDetails()">Show Details</button>
+        
+    
+
+
+        <p>Name</label>
+        <input type="Name" id="input-name">
+        
+        <p>Position</label>
+        <input type="Position" id="input-position">
+        
+        <p>Tech</label>
+        <input type="Tech" id="input-tech">
+
+        <button id="change-details" onclick="changeDetails()">Change</button>
+    </div>
+
+    <script>
+
+        function showDetails()
+        {
+            const name = document.getElementById("name")
+            name.innerHTML = "Bogdan"
+
+            const position = document.getElementById("position")
+            position.innerHTML = "Intern"
+
+            const technology = document.getElementById("technology")
+            technology.innerHTML = "Dotnet"
+
+        }
+
+        function changeDetails()
+        {
+            const nameValue = document.getElementById("input-name").value
+            document.getElementById("name").innerHTML = nameValue
+
+            const positionValue = document.getElementById("input-position").value
+            document.getElementById("position").innerHTML = positionValue
+
+            const techValue = document.getElementById("input-tech").value
+            document.getElementById("technology").innerHTML = techValue
+        }
+
+    </script>
+
+</body>
+</html>
