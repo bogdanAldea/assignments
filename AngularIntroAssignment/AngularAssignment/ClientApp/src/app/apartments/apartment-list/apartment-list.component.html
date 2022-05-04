@@ -1,0 +1,34 @@
+<div>
+    <h1>{{ pageTitle }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Owner</th>
+                <th>Floor</th>
+                <th>Residents</th>
+                <th>Payment</th>
+                <th>Paid</th>
+                <th>Change Payment Amount</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let apartment of apartments; let i=index">
+                <td>{{ apartment.NumberInBuilding }}</td>
+                <td>{{ apartment.Owner ? apartment.Owner : "Has no owner." }}</td>
+                <td>{{ apartment.Floor }}</td>
+                <td>{{ apartment.Residents }}</td>
+                <td>{{ apartment.Payment }}</td>
+                <td>{{ apartment.PaymentIsPaid ? "Yes": "No"}}</td>
+                <td><input type="text" [(ngModel)]="apartment.Payment" placeholder="0"></td>     
+                <td><button (click)="updatePayments(value=i)">Update</button></td>
+                <td><button (click)="registerPayment(value=i)">Register Payment</button></td>
+   
+            </tr>
+            <tr>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
