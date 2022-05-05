@@ -1,0 +1,24 @@
+
+<div class="container">
+
+    <div>
+        <h1>List of Products</h1>
+    </div>
+
+    <div class="row">
+        <!-- for each object, create a column -->
+        <div class="col-lg-4" *ngFor="let product of products">
+            <app-product-card [product]="product"></app-product-card>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <app-create-product (onProductCreated)="addNewProductToList($event)"></app-create-product>
+    </div>
+
+    <div class="row">
+        <app-create-product-reactive (onProductCreated)="addNewProductToList($event)"></app-create-product-reactive>
+    </div>
+
+</div>

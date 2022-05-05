@@ -1,0 +1,22 @@
+<div>
+    <h2>Template-Driven Form</h2>
+    
+    <form #form="ngForm" (ngSubmit)="submitForm()">
+        <input class="form-control" type="text" [(ngModel)]="product.Name" name="productName" #productName="ngModel" placeholder="Name..." required> 
+        <div>
+            <p *ngIf="productName.touched && !productName.valid">Name is invalid</p>
+        </div>
+        
+        <input class="form-control" type="text" name="productCategory" [(ngModel)]="product.Category" #productCategory="ngModel" placeholder="Category..." required>
+        <div>
+            <p *ngIf="productCategory.touched && !productCategory.valid">Category is invalid</p>
+        </div>
+        
+        <input class="form-control" type="number" name="productPrice" [(ngModel)]="product.Price" #productPrice="ngModel" placeholder="Price..."> 
+
+        <input class="form-control" type="number" name="productQuantity" [(ngModel)]="product.Quantity" #productQuantity placeholder="Quantity...">
+
+        <button type="submit">Add</button>
+    </form>
+
+  </div>

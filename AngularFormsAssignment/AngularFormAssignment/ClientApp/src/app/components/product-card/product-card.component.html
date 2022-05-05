@@ -1,0 +1,13 @@
+
+<div class="card">
+    <div class="description">
+        <!-- Product Name -->
+        <h2>{{ product.Name | uppercase }}</h2>
+        <!-- Product Category -->
+        <h3>{{ product.Category | titlecase }}</h3>
+        <!-- Product Price -->
+        <p>Price: {{ product.Price | currency: "EUR" }}</p>
+        <!-- Product Quantity -->
+        <p>Quantity: {{ product.Quantity }}</p>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div>
+    <h2>Reactive Form</h2>
+    
+    <form [formGroup]="productViewModel"  (ngSubmit)="submitForm()">
+        <input type="text" name="name" formControlName="name" placeholder="Name...">
+        <input type="text" name="category" formControlName="category" placeholder="Category...">
+        <input type="number" name="price" formControlName="price" placeholder="Price...">
+        <input type="number" name="quantity" formControlName="quantity" placeholder="Quantity...">
+        <button type="submit">Add</button>
+    </form>
+</div>
