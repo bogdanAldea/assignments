@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div>
+        <h1>List of Products</h1>
+    </div>
+
+    <div class="row">
+        <!-- for each object, create a column -->
+        <div class="col-md-4" *ngFor="let product of products">
+            <!-- use ProductCardComponent to render each product object -->
+            <app-product-card #productCardView  [product]="product">            
+                <div #productCardContent>asd</div>
+            </app-product-card>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Use CreateProductObject to render a form -->
+        <app-create-product (newProduct)="AddProductToList($event)">
+        </app-create-product>
+    </div>
+
+</div>

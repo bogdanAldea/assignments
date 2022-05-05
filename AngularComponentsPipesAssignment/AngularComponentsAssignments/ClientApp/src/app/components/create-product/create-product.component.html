@@ -1,0 +1,20 @@
+<div class="product-creator">
+
+    <div class="container">
+        <div class="row">
+            <label for="name">Name</label>
+            <input type="text" name="new-product" id="name" #name>
+        
+            <label for="category">Category</label>
+            <input type="text" name="new-product" id="category" #category>
+        
+            <label for="price">Price</label>
+            <input type="number" name="new-product" id="price" #price>
+        
+            <label for="quantity">Quantity</label>
+            <input type="number" name="new-product" id="quantity" #quantity>
+
+            <button (click)="AddNewProduct(name.value, category.value, price.value, quantity.value)">Add</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+.container {
+    width: 100%;
+}
+
+#product-column {
+    float: left;
+    margin: 10px;
+    background-color: bisque;
+    padding: 20px;
+    list-style: none;
+}
